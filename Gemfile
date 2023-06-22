@@ -26,5 +26,9 @@ end
 group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+  gem 'sorbet'
+  gem 'tapioca'
 end
 
+gem 'sorbet-runtime'
+gem 'spoom'
