@@ -1,0 +1,1 @@
+rails generate model company corporate_name:string{100} fantasy_name:string{100} email:string{100}:uniq domain:string{50}:uniq cnpj:string{14}:uniq status:integer:index token:token

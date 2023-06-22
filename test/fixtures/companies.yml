@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  corporate_name: MyString
+  fantasy_name: MyString
+  email: MyString
+  domain: MyString
+  cnpj: MyString
+  status: 1
+  token: 
+
+two:
+  corporate_name: MyString
+  fantasy_name: MyString
+  email: MyString
+  domain: MyString
+  cnpj: MyString
+  status: 1
+  token: 

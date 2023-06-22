@@ -10,8 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 0) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_22_233818) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "companies", force: :cascade do |t|
+    t.string "corporate_name", limit: 100, null: false
+    t.string "fantasy_name", limit: 100, null: false
+    t.string "email", limit: 100, null: false
+    t.string "domain", limit: 50, null: false
+    t.string "cnpj", limit: 14, null: false
+    t.integer "status", default: 1, null: false
+    t.string "token"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["cnpj"], name: "index_companies_on_cnpj", unique: true
+    t.index ["domain"], name: "index_companies_on_domain", unique: true
+    t.index ["email"], name: "index_companies_on_email", unique: true
+    t.index ["status"], name: "index_companies_on_status"
+    t.index ["token"], name: "index_companies_on_token", unique: true
+  end
 
 end
