@@ -1,0 +1,4 @@
+### Health Check
+GET http://localhost:3000/api/v1/health_check
+Accept: application/json
+Accept-Language: pt-BR
