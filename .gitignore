@@ -22,5 +22,8 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
+# Ignore environments
+/config/initializers/envs.rb
+
 # Ignore Gemfile.lock
 Gemfile.lock

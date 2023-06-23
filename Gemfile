@@ -32,3 +32,5 @@ end
 
 gem 'sorbet-runtime'
 gem 'spoom'
+
+gem 'jwt', '~> 2.7', '>= 2.7.1'
