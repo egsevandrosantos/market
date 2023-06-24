@@ -5,4 +5,7 @@
 # typed: false
 
 module ActionMailer::Base::Mail::Message; end
+module ActionMailer::MessageDelivery; end
 module GlobalID::Identification::SignedGlobalID; end
+module Sidekiq::Process; end
+module Sidekiq::SortedEntry; end

@@ -12,6 +12,9 @@ module GeneratedPathHelpersModule
   def api_v1_companies_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
+  def api_v1_company_active_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
   def api_v1_company_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
@@ -28,4 +31,10 @@ module GeneratedPathHelpersModule
 
   sig { params(args: T.untyped).returns(String) }
   def rails_info_routes_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def rails_mailers_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def sidekiq_web_path(*args); end
 end

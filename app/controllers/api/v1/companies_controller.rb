@@ -6,7 +6,7 @@ class Api::V1::CompaniesController < ApplicationController
 
   wrap_parameters :company, include: [:corporate_name, :fantasy_name, :email, :email_confirmation, :domain, :cnpj]
 
-  skip_around_action :require_authentication, only: [:create, :show]
+  skip_around_action :require_authentication, only: [:create, :show, :active]
 
   sig { void }
   def create
@@ -14,6 +14,7 @@ class Api::V1::CompaniesController < ApplicationController
     if company.valid?
       begin
         company.save!
+        T.let(Api::V1::CompaniesMailer, T.untyped).with(company: company).signup.deliver_later
         head :created, location: api_v1_company_url(company)
       rescue Exception => ex
         Rails.logger.error "Error create company: " + ex.full_message
@@ -41,6 +42,22 @@ class Api::V1::CompaniesController < ApplicationController
       end
     else
       render :not_found
+    end
+  end
+
+  sig { void }
+  def active
+    company = Company.status_inactive.find_by(token: params[:token])
+    if company.present?
+      begin
+        company.update!(status: :active, token: nil)
+        head :ok
+      rescue Exception => ex
+        Rails.logger.error "Error active company: " + ex.full_message
+        head :internal_server_error
+      end
+    else
+      head :not_found
     end
   end
 

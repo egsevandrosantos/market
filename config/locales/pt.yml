@@ -1,6 +1,20 @@
 pt:
   hello: "Olá mundo"
   hello_world: "Olá mundo"
+  welcome_to_market: Bem-vindo ao Market
+  your_account_is_inactive: Sua conta está inativa
+  to_active_click_in_button_or_follow_link: Para ativa-la clique no botão abaixo ou utilize esse link
+  to_active_follow_link: Para ativa-la utilize esse link
+  active_your_account: Ative sua conta
+  thats_it: É isso
+  enjoy_market: Aproveite o Market
+  powered_by: Criado com
+
+  api:
+    v1:
+      companies_mailer:
+        signup:
+          subject: Bem-vindo ao Market
 
   activerecord:
     errors:

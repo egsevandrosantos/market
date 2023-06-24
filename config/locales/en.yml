@@ -32,6 +32,20 @@
 en:
   hello: "Hello world"
   hello_world: "Hello world"
+  welcome_to_market: Welcome to Market
+  your_account_is_inactive: Your account is inactive
+  to_active_click_in_button_or_follow_link: To active click in button below or follow this link
+  to_active_follow_link: To active follow this link
+  active_your_account: Active your account
+  thats_it: That's it
+  enjoy_market: Enjoy Market
+  powered_by: Powered by
+
+  api:
+    v1:
+      companies_mailer:
+        signup:
+          subject: Welcome to Market
 
   activerecord:
     errors:

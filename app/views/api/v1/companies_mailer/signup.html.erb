@@ -1,0 +1,121 @@
+<table
+  role="presentation"
+  border="0"
+  cellpadding="0"
+  cellspacing="0"
+  class="body"
+>
+  <tr>
+    <td>&nbsp;</td>
+    <td class="container">
+      <div class="header">
+        <table
+          role="presentation"
+          border="0"
+          cellpadding="0"
+          cellspacing="0"
+          width="100%"
+        >
+          <tr>
+            <td class="align-center" width="100%">
+              <a href="https://postdrop.io"
+                ><img
+                  src="https://cdn.postdrop.io/starter-templates-v0/postdrop-logo-dark.png"
+                  height="40"
+                  alt="Postdrop"
+              /></a>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="content">
+        <!-- START CENTERED WHITE CONTAINER -->
+        <span class="preheader"
+          >This is preheader text. Some clients will show this text as a
+          preview.</span
+        >
+        <table role="presentation" class="main">
+          <!-- START MAIN CONTENT AREA -->
+          <tr>
+            <td class="wrapper">
+              <table
+                role="presentation"
+                border="0"
+                cellpadding="0"
+                cellspacing="0"
+              >
+                <tr>
+                  <td>
+                    <p>
+                      👋&nbsp; <%= I18n.t('welcome_to_market') %>, <%= @company.corporate_name %>.
+                    </p>
+                    <p>
+                      <%= I18n.t('your_account_is_inactive') %>, <%= I18n.t('to_active_click_in_button_or_follow_link').humanize(capitalize: false) %>: <a href="<%= @link_to_active %>" target="_blank"><%= @link_to_active %></a>
+                    </p>
+                    <table
+                      role="presentation"
+                      border="0"
+                      cellpadding="0"
+                      cellspacing="0"
+                      class="btn btn-primary"
+                    >
+                      <tbody>
+                        <tr>
+                          <td align="center">
+                            <table
+                              role="presentation"
+                              border="0"
+                              cellpadding="0"
+                              cellspacing="0"
+                            >
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    <a href="<%= @link_to_active %>" target="_blank"
+                                      ><%= I18n.t('active_your_account') %></a
+                                    >
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <p>💃&nbsp; <%= I18n.t('thats_it') %>. <%= I18n.t('enjoy_market') %>.</p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- END MAIN CONTENT AREA -->
+        </table>
+
+        <!-- START FOOTER -->
+        <div class="footer">
+          <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+            <%# <tr>
+              <td class="content-block">
+                <span class="apple-link"
+                  >Don't forget to add your address here</span
+                >
+                <br />
+                And <a href="https://postdrop.io">unsubscribe link</a> here.
+              </td>
+            </tr> %>
+            <tr>
+              <td class="content-block powered-by">
+                <%= I18n.t('powered_by') %> <a href="https://postdrop.io">Postdrop</a>.
+              </td>
+            </tr>
+          </table>
+        </div>
+        <!-- END FOOTER -->
+
+        <!-- END CENTERED WHITE CONTAINER -->
+      </div>
+    </td>
+    <td>&nbsp;</td>
+  </tr>
+</table>

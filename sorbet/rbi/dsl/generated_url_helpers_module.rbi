@@ -12,6 +12,9 @@ module GeneratedUrlHelpersModule
   def api_v1_companies_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
+  def api_v1_company_active_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
   def api_v1_company_show_by_token_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
@@ -28,4 +31,10 @@ module GeneratedUrlHelpersModule
 
   sig { params(args: T.untyped).returns(String) }
   def rails_info_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def rails_mailers_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def sidekiq_web_url(*args); end
 end
