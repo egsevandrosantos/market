@@ -8,6 +8,9 @@ class ApplicationController < ActionController::API
   around_action :require_authentication
   before_action :switch_locale
 
+  sig { returns(T.nilable(Company)) }
+  attr_accessor :current_company
+
   private
 
   sig { params(blk: T.proc.void).void }
@@ -19,9 +22,13 @@ class ApplicationController < ActionController::API
       return head :unauthorized
     end
 
+    sub_info = T.let(T.must(jwt_decoded[0])["sub"], T::Hash[String, Integer])
+    company_id = T.let(T.must(sub_info["company_id"]), Integer)
+    @current_company = Company.find_by(id: company_id)
+
     yield
 
-    response.headers['Access-Token'] = JwtUtil.create_token()
+    response.headers['Access-Token'] = JwtUtil.create_token(company_id)
   end
 
   sig { void }

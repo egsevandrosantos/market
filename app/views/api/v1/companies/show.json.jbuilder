@@ -1,0 +1,1 @@
+json.(@current_company, :id, :corporate_name, :fantasy_name, :email, :domain, :cnpj, :status, :created_at, :updated_at)

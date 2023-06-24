@@ -12,6 +12,9 @@ module GeneratedUrlHelpersModule
   def api_v1_companies_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
+  def api_v1_company_show_by_token_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
   def api_v1_company_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }

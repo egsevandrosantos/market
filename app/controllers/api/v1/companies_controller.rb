@@ -32,6 +32,18 @@ class Api::V1::CompaniesController < ApplicationController
     head :method_not_allowed
   end
 
+  sig { void }
+  def show_by_token
+    if @current_company.present?
+      respond_to do |format|
+        format.json { render 'api/v1/companies/show', status: :ok }
+        format.any { head :unsupported_media_type }
+      end
+    else
+      render :not_found
+    end
+  end
+
   private
 
   sig { returns(ActionController::Parameters) }

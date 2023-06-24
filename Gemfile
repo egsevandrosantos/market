@@ -34,3 +34,5 @@ gem 'sorbet-runtime'
 gem 'spoom'
 
 gem 'jwt', '~> 2.7', '>= 2.7.1'
+
+gem 'jbuilder', '~> 2.11', '>= 2.11.5'

@@ -15,6 +15,9 @@ module GeneratedPathHelpersModule
   def api_v1_company_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
+  def api_v1_company_show_by_token_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
   def api_v1_health_check_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }

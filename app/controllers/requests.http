@@ -22,3 +22,9 @@ Content-Type: application/json
 GET http://localhost:3000/api/v1/companies/1
 Accept: application/json
 Accept-Language: pt-BR
+
+### Get company by token
+GET http://localhost:3000/api/v1/companies
+Accept: application/json
+Accept-Language: pt-BR
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJici5jb20uc2FudG9zLmV2YW5kcm8ubWFya2V0IiwiZXhwIjoxNjg3NTgyNDQ1LCJzdWIiOnsiY29tcGFueV9pZCI6MX19.H47V3kTUztWdw-wWQM4L36aGr3wHtC3BtpwaWgTc-ZA
