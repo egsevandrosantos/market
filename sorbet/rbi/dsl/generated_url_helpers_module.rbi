@@ -9,6 +9,12 @@ module GeneratedUrlHelpersModule
   include ::ActionDispatch::Routing::PolymorphicRoutes
 
   sig { params(args: T.untyped).returns(String) }
+  def api_v1_companies_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def api_v1_company_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
   def api_v1_health_check_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }

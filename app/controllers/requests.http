@@ -2,3 +2,23 @@
 GET http://localhost:3000/api/v1/health_check
 Accept: application/json
 Accept-Language: pt-BR
+
+### Create company
+POST http://localhost:3000/api/v1/companies
+Accept: application/json
+Accept-Language: en
+Content-Type: application/json
+
+{
+  "corporate_name": "Nair e Marli Telas ME",
+  "fantasy_name": "Nair e Marli Telas ME",
+  "email": "estoque@nairemarlitelasme.com.br",
+  "email_confirmation": "estoque@nairemarlitelasme.com.br",
+  "domain": "nairemarlitelasme",
+  "cnpj": "96003283000102"
+}
+
+### Get company
+GET http://localhost:3000/api/v1/companies/1
+Accept: application/json
+Accept-Language: pt-BR
