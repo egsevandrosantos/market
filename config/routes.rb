@@ -20,6 +20,10 @@ Rails.application.routes.draw do
       get 'companies', to: 'companies#show_by_token', as: :company_show_by_token
       get 'companies/active', to: 'companies#active', as: :company_active
       resources :companies, only: [:create, :show]
+
+      scope ':domain', constraint: { domain: /\A[a-zA-Z]([a-zA-Z0-9]+[.-]?)+\z/ } do
+        post 'login', to: 'login#login'
+      end
     end
   end
 end

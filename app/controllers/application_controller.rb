@@ -10,6 +10,8 @@ class ApplicationController < ActionController::API
 
   sig { returns(T.nilable(Company)) }
   attr_accessor :current_company
+  sig { returns(T.nilable(User)) }
+  attr_accessor :current_user
 
   private
 
@@ -24,11 +26,13 @@ class ApplicationController < ActionController::API
 
     sub_info = T.let(T.must(jwt_decoded[0])["sub"], T::Hash[String, Integer])
     company_id = T.let(T.must(sub_info["company_id"]), Integer)
+    user_id = T.let(T.must(sub_info["user_id"]), Integer)
     @current_company = Company.find_by(id: company_id)
+    @current_user = User.find_by(id: user_id)
 
     yield
 
-    response.headers['Access-Token'] = JwtUtil.create_token(company_id)
+    response.headers['Access-Token'] = JwtUtil.create_token(company_id, user_id)
   end
 
   sig { void }

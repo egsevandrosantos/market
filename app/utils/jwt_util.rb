@@ -31,10 +31,11 @@ class JwtUtil
     return nil
   end
 
-  sig { params(company_id: Integer).returns(String) }
-  def self.create_token(company_id)
+  sig { params(company_id: Integer, user_id: Integer).returns(String) }
+  def self.create_token(company_id, user_id)
     sub_info = T.let({}, T::Hash[Symbol, Integer])
     sub_info[:company_id] = company_id
+    sub_info[:user_id] = user_id
 
     minutes = 1.minutes
     exp = (Time.zone.now + minutes).to_i
