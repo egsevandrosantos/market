@@ -6,16 +6,16 @@ Accept-Language: pt-BR
 ### Create company
 POST http://localhost:3000/api/v1/companies
 Accept: application/json
-Accept-Language: en
+Accept-Language: pt-BR
 Content-Type: application/json
 
 {
-  "corporate_name": "Nair e Marli Telas ME",
-  "fantasy_name": "Nair e Marli Telas ME",
-  "email": "estoque@nairemarlitelasme.com.br",
-  "email_confirmation": "estoque@nairemarlitelasme.com.br",
-  "domain": "nairemarlitelasme",
-  "cnpj": "96003283000102"
+  "corporate_name": "Cauê e Kamilly Pães e Doces ME",
+  "fantasy_name": "Cauê e Kamilly Pães e Doces ME",
+  "email": "pesquisa@caueekamillypaesedocesme.com.br",
+  "email_confirmation": "pesquisa@caueekamillypaesedocesme.com.br",
+  "domain": "caueekamillypaesedocesme",
+  "cnpj": "61992766000194"
 }
 
 ### Get company
