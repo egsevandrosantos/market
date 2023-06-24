@@ -2,6 +2,8 @@
 require 'sorbet-runtime'
 
 class Company < ApplicationRecord
+  has_many :users
+  accepts_nested_attributes_for :users
   has_secure_token :token
 
   validates :corporate_name, presence: true, length: { maximum: 100 }

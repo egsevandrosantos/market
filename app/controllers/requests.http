@@ -3,7 +3,7 @@ GET http://localhost:3000/api/v1/health_check
 Accept: application/json
 Accept-Language: pt-BR
 
-### Create company
+### Create company and first user
 POST http://localhost:3000/api/v1/companies
 Accept: application/json
 Accept-Language: pt-BR
@@ -15,7 +15,17 @@ Content-Type: application/json
   "email": "pesquisa@caueekamillypaesedocesme.com.br",
   "email_confirmation": "pesquisa@caueekamillypaesedocesme.com.br",
   "domain": "caueekamillypaesedocesme",
-  "cnpj": "61992766000194"
+  "cnpj": "61992766000194",
+  "users_attributes": [
+    {
+      "full_name": "Márcia Helena Duarte",
+      "email": "marcia_duarte@hp.com",
+      "email_confirmation": "marcia_duarte@hp.com",
+      "cpf": "00717879925",
+      "password": "R(dCe4w24o;t",
+      "password_confirmation": "R(dCe4w24o;t"
+    }
+  ]
 }
 
 ### Get company

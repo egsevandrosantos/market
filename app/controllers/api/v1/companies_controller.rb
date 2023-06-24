@@ -4,7 +4,7 @@ require 'sorbet-runtime'
 class Api::V1::CompaniesController < ApplicationController
   extend T::Sig
 
-  wrap_parameters :company, include: [:corporate_name, :fantasy_name, :email, :email_confirmation, :domain, :cnpj]
+  wrap_parameters :company, include: [:corporate_name, :fantasy_name, :email, :email_confirmation, :domain, :cnpj, :users_attributes]
 
   skip_around_action :require_authentication, only: [:create, :show, :active]
 
@@ -65,6 +65,6 @@ class Api::V1::CompaniesController < ApplicationController
 
   sig { returns(ActionController::Parameters) }
   def company_params
-    params.require(:company).permit(:corporate_name, :fantasy_name, :email, :email_confirmation, :domain, :cnpj)
+    params.require(:company).permit(:corporate_name, :fantasy_name, :email, :email_confirmation, :domain, :cnpj, users_attributes: [:full_name, :cpf, :email, :email_confirmation, :password, :password_confirmation])
   end
 end
