@@ -1,1 +1,2 @@
 rails generate model company corporate_name:string{100} fantasy_name:string{100} email:string{100}:uniq domain:string{50}:uniq cnpj:string{14}:uniq status:integer:index token:token
+rails generate model user full_name:string{100} cpf:string{11} email:string{100} password:digest company:references token:token status:integer:index

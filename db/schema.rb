@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_22_233818) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_24_181746) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -31,4 +31,22 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_22_233818) do
     t.index ["token"], name: "index_companies_on_token", unique: true
   end
 
+  create_table "users", force: :cascade do |t|
+    t.string "full_name", limit: 100, null: false
+    t.string "cpf", limit: 11, null: false
+    t.string "email", limit: 100, null: false
+    t.string "password_digest"
+    t.bigint "company_id", null: false
+    t.string "token"
+    t.integer "status", default: 1, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["company_id"], name: "index_users_on_company_id"
+    t.index ["cpf", "company_id"], name: "index_users_on_cpf_and_company_id", unique: true
+    t.index ["email", "company_id"], name: "index_users_on_email_and_company_id", unique: true
+    t.index ["status"], name: "index_users_on_status"
+    t.index ["token"], name: "index_users_on_token", unique: true
+  end
+
+  add_foreign_key "users", "companies"
 end
