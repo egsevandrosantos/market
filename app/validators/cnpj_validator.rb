@@ -6,7 +6,7 @@ class CnpjValidator < ActiveModel::EachValidator
 
   sig { params(cnpj: T.nilable(String)).returns(T::Boolean) }
   def self.valid?(cnpj)
-    if cnpj.present? && cnpj.length == 14 && cnpj.match?(/\A[0-9]{14}\z/)
+    if cnpj.present? && cnpj.length == 14 && cnpj.match?(/\A[0-9]{14}\z/) && !cnpj.match?(/\A(.)\1*\z/)
       dv1 = T.let(calc_dv([5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2], cnpj), Integer)
       dv2 = T.let(calc_dv([6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2], cnpj), Integer)
       return true if cnpj.end_with?("#{dv1}#{dv2}")
