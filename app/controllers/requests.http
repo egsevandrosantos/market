@@ -60,3 +60,15 @@ GET http://localhost:3000/api/v1/users
 Accept: application/json
 Accept-Language: pt-BR
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJici5jb20uc2FudG9zLmV2YW5kcm8ubWFya2V0IiwiZXhwIjoxNjg3NjU3NDg3LCJzdWIiOnsiY29tcGFueV9pZCI6MSwidXNlcl9pZCI6MX19.UKZCjDaCVkc4910lQjKnz5b-csVUD3Ibt2l5nVejmYg
+
+### Invite user to company
+POST http://localhost:3000/api/v1/company_user_invitations
+Accept: application/json
+Accept-Language: pt-BR
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJici5jb20uc2FudG9zLmV2YW5kcm8ubWFya2V0IiwiZXhwIjoxNjg3NjYxNDU0LCJzdWIiOnsiY29tcGFueV9pZCI6MSwidXNlcl9pZCI6MX19.Zd4Y7l4jaKH2iW_PCY6gRr57vM16iPoNyFc5eeWkwZM
+
+{
+  "user_email": "sophie.sara.nogueira@fclcapital.com",
+  "user_email_confirmation": "sophie.sara.nogueira@fclcapital.com"
+}

@@ -41,6 +41,8 @@ en:
   enjoy_market: Enjoy Market
   powered_by: Powered by
   invited_you_to_market: Invited you to join in Market
+  to_create_your_account_click_in_button_or_follow_link: To create your account click in button bellow or follow this link
+  create_your_account: Create your account
 
   api:
     v1:
@@ -50,6 +52,9 @@ en:
       users_mailer:
         signup:
           subject: Welcome to Market
+      company_user_invitations_mailer:
+        invite_user:
+          subject: You're invited to Market
 
   activerecord:
     errors:

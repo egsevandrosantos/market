@@ -10,6 +10,8 @@ pt:
   enjoy_market: Aproveite o Market
   powered_by: Criado com
   invited_you_to_market: Convidou você para juntar-se ao Market
+  to_create_your_account_click_in_button_or_follow_link: Para criar sua conta clique no botão abaixo ou utilize esse link
+  create_your_account: Crie sua conta
 
   api:
     v1:
@@ -19,6 +21,9 @@ pt:
       users_mailer:
         signup:
           subject: Bem-vindo ao Market
+      company_user_invitations_mailer:
+        invite_user:
+          subject: Você foi convidado para o Market
 
   activerecord:
     errors:
