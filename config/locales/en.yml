@@ -30,7 +30,7 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  hello: Hello
   hello_world: "Hello world"
   welcome_to_market: Welcome to Market
   your_account_is_inactive: Your account is inactive
@@ -40,10 +40,14 @@ en:
   thats_it: That's it
   enjoy_market: Enjoy Market
   powered_by: Powered by
+  invited_you_to_market: Invited you to join in Market
 
   api:
     v1:
       companies_mailer:
+        signup:
+          subject: Welcome to Market
+      users_mailer:
         signup:
           subject: Welcome to Market
 

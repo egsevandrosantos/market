@@ -1,5 +1,5 @@
 pt:
-  hello: "Olá mundo"
+  hello: Olá
   hello_world: "Olá mundo"
   welcome_to_market: Bem-vindo ao Market
   your_account_is_inactive: Sua conta está inativa
@@ -9,10 +9,14 @@ pt:
   thats_it: É isso
   enjoy_market: Aproveite o Market
   powered_by: Criado com
+  invited_you_to_market: Convidou você para juntar-se ao Market
 
   api:
     v1:
       companies_mailer:
+        signup:
+          subject: Bem-vindo ao Market
+      users_mailer:
         signup:
           subject: Bem-vindo ao Market
 

@@ -47,7 +47,10 @@
                 <tr>
                   <td>
                     <p>
-                      👋&nbsp; <%= I18n.t('welcome_to_market') %>, <%= @company.corporate_name %>.
+                      👋&nbsp; <%= I18n.t('hello') %>, <%= @user.full_name %>.
+                    </p>
+                    <p>
+                      <%= @company.corporate_name %> <%= I18n.t('invited_you_to_market').uncapitalize %>.
                     </p>
                     <p>
                       <%= I18n.t('your_account_is_inactive') %>, <%= I18n.t('to_active_click_in_button_or_follow_link').uncapitalize %>: <a href="<%= @link_to_active %>" target="_blank"><%= @link_to_active %></a>
