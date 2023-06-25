@@ -30,6 +30,12 @@ module GeneratedPathHelpersModule
   def api_v1_user_active_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
+  def api_v1_user_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def api_v1_user_show_by_token_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
   def rails_info_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }

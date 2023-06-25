@@ -30,6 +30,12 @@ module GeneratedUrlHelpersModule
   def api_v1_user_active_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
+  def api_v1_user_show_by_token_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def api_v1_user_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
   def rails_info_properties_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
