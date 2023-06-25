@@ -9,5 +9,8 @@ class ActiveSupport::TestCase
   def companies(*fixture_names); end
 
   sig { params(fixture_names: T.any(String, Symbol)).returns(T.untyped) }
+  def company_user_invitations(*fixture_names); end
+
+  sig { params(fixture_names: T.any(String, Symbol)).returns(T.untyped) }
   def users(*fixture_names); end
 end

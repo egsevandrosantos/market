@@ -21,6 +21,12 @@ module GeneratedPathHelpersModule
   def api_v1_company_show_by_token_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
+  def api_v1_company_user_invitation_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def api_v1_company_user_invitations_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
   def api_v1_health_check_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
@@ -34,6 +40,9 @@ module GeneratedPathHelpersModule
 
   sig { params(args: T.untyped).returns(String) }
   def api_v1_user_show_by_token_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def api_v1_users_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def rails_info_path(*args); end

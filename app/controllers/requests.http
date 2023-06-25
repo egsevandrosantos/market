@@ -72,3 +72,18 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJici5jb20uc2FudG9zLmV2YW5kc
   "user_email": "sophie.sara.nogueira@fclcapital.com",
   "user_email_confirmation": "sophie.sara.nogueira@fclcapital.com"
 }
+
+### Create user
+POST http://localhost:3000/api/v1/users?token=KxuY5zTVNRgH4yfxBGhCRA6b
+Accept: application/json
+Accept-Language: pt-BR
+Content-Type: application/json
+
+{
+  "full_name": "Sophie Sara Nogueira",
+  "email": "sophie.sara.nogueira@fclcapital.com",
+  "email_confirmation": "sophie.sara.nogueira@fclcapital.com",
+  "cpf": "93608903917",
+  "password": "R(dCe4w24o;t",
+  "password_confirmation": "R(dCe4w24o;t"
+}

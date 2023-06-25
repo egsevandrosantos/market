@@ -21,6 +21,12 @@ module GeneratedUrlHelpersModule
   def api_v1_company_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
+  def api_v1_company_user_invitation_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def api_v1_company_user_invitations_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
   def api_v1_health_check_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
@@ -34,6 +40,9 @@ module GeneratedUrlHelpersModule
 
   sig { params(args: T.untyped).returns(String) }
   def api_v1_user_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def api_v1_users_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def rails_info_properties_url(*args); end
