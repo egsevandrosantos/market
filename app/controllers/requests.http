@@ -73,7 +73,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJici5jb20uc2FudG9zLmV2YW5kc
   "user_email_confirmation": "sophie.sara.nogueira@fclcapital.com"
 }
 
-### Create user
+### Create user (by invitation)
 POST http://localhost:3000/api/v1/users?token=KxuY5zTVNRgH4yfxBGhCRA6b
 Accept: application/json
 Accept-Language: pt-BR
