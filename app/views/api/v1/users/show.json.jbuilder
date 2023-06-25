@@ -1,0 +1,1 @@
+json.(@current_user, :id, :full_name, :email, :cpf, :status, :created_at, :updated_at)

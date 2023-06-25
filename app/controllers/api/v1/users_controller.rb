@@ -4,7 +4,24 @@ require 'sorbet-runtime'
 class Api::V1::UsersController < ApplicationController
   extend T::Sig
 
-  skip_around_action :require_authentication, only: [:active]
+  skip_around_action :require_authentication, only: [:show, :active]
+
+  sig { void }
+  def show
+    head :method_not_allowed
+  end
+
+  sig { void }
+  def show_by_token
+    if @current_user.present?
+      respond_to do |format|
+        format.json { render 'api/v1/users/show', status: :ok }
+        format.any { head :unsupported_media_type }
+      end
+    else
+      head :not_found
+    end
+  end
 
   sig { void }
   def active

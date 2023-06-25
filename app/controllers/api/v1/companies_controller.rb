@@ -40,7 +40,7 @@ class Api::V1::CompaniesController < ApplicationController
         format.any { head :unsupported_media_type }
       end
     else
-      render :not_found
+      head :not_found
     end
   end
 

@@ -33,6 +33,11 @@ GET http://localhost:3000/api/v1/companies/1
 Accept: application/json
 Accept-Language: pt-BR
 
+### Get user (Method not allowed)
+GET http://localhost:3000/api/v1/users/1
+Accept: application/json
+Accept-Language: pt-BR
+
 ### Login
 POST http://localhost:3000/api/v1/caueekamillypaesedocesme/login
 Accept: application/json
@@ -48,4 +53,10 @@ Content-Type: application/json
 GET http://localhost:3000/api/v1/companies
 Accept: application/json
 Accept-Language: pt-BR
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJici5jb20uc2FudG9zLmV2YW5kcm8ubWFya2V0IiwiZXhwIjoxNjg3NTgyNDQ1LCJzdWIiOnsiY29tcGFueV9pZCI6MX19.H47V3kTUztWdw-wWQM4L36aGr3wHtC3BtpwaWgTc-ZA
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJici5jb20uc2FudG9zLmV2YW5kcm8ubWFya2V0IiwiZXhwIjoxNjg3NjU3NDg3LCJzdWIiOnsiY29tcGFueV9pZCI6MSwidXNlcl9pZCI6MX19.UKZCjDaCVkc4910lQjKnz5b-csVUD3Ibt2l5nVejmYg
+
+### Get user by token
+GET http://localhost:3000/api/v1/users
+Accept: application/json
+Accept-Language: pt-BR
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJici5jb20uc2FudG9zLmV2YW5kcm8ubWFya2V0IiwiZXhwIjoxNjg3NjU3NDg3LCJzdWIiOnsiY29tcGFueV9pZCI6MSwidXNlcl9pZCI6MX19.UKZCjDaCVkc4910lQjKnz5b-csVUD3Ibt2l5nVejmYg
