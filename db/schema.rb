@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_24_181746) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_25_021332) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -31,6 +31,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_24_181746) do
     t.index ["token"], name: "index_companies_on_token", unique: true
   end
 
+  create_table "company_user_invitations", force: :cascade do |t|
+    t.bigint "company_id", null: false
+    t.string "user_email", limit: 100, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["company_id", "user_email"], name: "index_company_user_invitations_on_company_id_and_user_email", unique: true
+    t.index ["company_id"], name: "index_company_user_invitations_on_company_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "full_name", limit: 100, null: false
     t.string "cpf", limit: 11, null: false
@@ -48,5 +57,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_24_181746) do
     t.index ["token"], name: "index_users_on_token", unique: true
   end
 
+  add_foreign_key "company_user_invitations", "companies"
   add_foreign_key "users", "companies"
 end
